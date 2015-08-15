@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20A92121B79DCBA00B7B013 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A92111B79DCBA00B7B013 /* Group.m */; };
+		F20A92161B79E35A00B7B013 /* MeetupCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A92151B79E35A00B7B013 /* MeetupCommunicator.m */; };
+		F20A921A1B7ADDAA00B7B013 /* GroupBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A92191B7ADDAA00B7B013 /* GroupBuilder.m */; };
+		F20A921E1B7B0EE700B7B013 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A921D1B7B0EE700B7B013 /* MeetupManager.m */; };
 		F276B59D1B79B12100449B4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F276B59C1B79B12100449B4A /* main.m */; };
 		F276B5A01B79B12100449B4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F276B59F1B79B12100449B4A /* AppDelegate.m */; };
 		F276B5A31B79B12200449B4A /* BrowseMeetup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F276B5A11B79B12200449B4A /* BrowseMeetup.xcdatamodeld */; };
@@ -29,6 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F20A92101B79DCBA00B7B013 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		F20A92111B79DCBA00B7B013 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		F20A92131B79DFE300B7B013 /* MeetupCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupCommunicatorDelegate.h; sourceTree = "<group>"; };
+		F20A92141B79E35A00B7B013 /* MeetupCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupCommunicator.h; sourceTree = "<group>"; };
+		F20A92151B79E35A00B7B013 /* MeetupCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupCommunicator.m; sourceTree = "<group>"; };
+		F20A92181B7ADDAA00B7B013 /* GroupBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuilder.h; sourceTree = "<group>"; };
+		F20A92191B7ADDAA00B7B013 /* GroupBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuilder.m; sourceTree = "<group>"; };
+		F20A921B1B7B026000B7B013 /* MeetupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManagerDelegate.h; sourceTree = "<group>"; };
+		F20A921C1B7B0EE700B7B013 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
+		F20A921D1B7B0EE700B7B013 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
 		F276B5971B79B12100449B4A /* BrowseMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowseMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276B59B1B79B12100449B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F276B59C1B79B12100449B4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +111,16 @@
 				F276B5AF1B79B12200449B4A /* LaunchScreen.xib */,
 				F276B5A11B79B12200449B4A /* BrowseMeetup.xcdatamodeld */,
 				F276B59A1B79B12100449B4A /* Supporting Files */,
+				F20A92101B79DCBA00B7B013 /* Group.h */,
+				F20A92111B79DCBA00B7B013 /* Group.m */,
+				F20A92131B79DFE300B7B013 /* MeetupCommunicatorDelegate.h */,
+				F20A92141B79E35A00B7B013 /* MeetupCommunicator.h */,
+				F20A92151B79E35A00B7B013 /* MeetupCommunicator.m */,
+				F20A92181B7ADDAA00B7B013 /* GroupBuilder.h */,
+				F20A92191B7ADDAA00B7B013 /* GroupBuilder.m */,
+				F20A921B1B7B026000B7B013 /* MeetupManagerDelegate.h */,
+				F20A921C1B7B0EE700B7B013 /* MeetupManager.h */,
+				F20A921D1B7B0EE700B7B013 /* MeetupManager.m */,
 			);
 			path = BrowseMeetup;
 			sourceTree = "<group>";
@@ -227,9 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20A921E1B7B0EE700B7B013 /* MeetupManager.m in Sources */,
 				F276B5A91B79B12200449B4A /* DetailViewController.m in Sources */,
 				F276B5A61B79B12200449B4A /* MasterViewController.m in Sources */,
 				F276B5A01B79B12100449B4A /* AppDelegate.m in Sources */,
+				F20A92161B79E35A00B7B013 /* MeetupCommunicator.m in Sources */,
+				F20A92121B79DCBA00B7B013 /* Group.m in Sources */,
+				F20A921A1B7ADDAA00B7B013 /* GroupBuilder.m in Sources */,
 				F276B5A31B79B12200449B4A /* BrowseMeetup.xcdatamodeld in Sources */,
 				F276B59D1B79B12100449B4A /* main.m in Sources */,
 			);
@@ -426,6 +454,7 @@
 				F276B5C21B79B12200449B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F276B5C31B79B12200449B4A /* Build configuration list for PBXNativeTarget "BrowseMeetupTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +463,7 @@
 				F276B5C51B79B12200449B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -8,12 +8,51 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "Group.h"
+#import "MeetupManager.h"
+#import "MeetupCommunicator.h"
 
-@interface MasterViewController ()
-
+@interface MasterViewController () <MeetupManagerDelegate> {
+    NSArray *_groups;
+    MeetupManager *_manager;
+}
 @end
 
 @implementation MasterViewController
+
+//- (void)startFetchingGroups:(NSNotification *)notification
+//{
+//    [_manager fetchGroupsAtCoordinate:self.locationManager.location.coordinate];
+//}
+
+- (void)didReceiveGroups:(NSArray *)groups
+{
+    _groups = groups;
+    [self.tableView reloadData];
+}
+
+- (void)fetchingGroupsFailedWithError:(NSError *)error
+{
+    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _groups.count;
+}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//    
+//    Group *group = _groups[indexPath.row];
+//    [cell.nameLabel setText:group.name];
+//    [cell.whoLabel setText:group.who];
+//    [cell.locationLabel setText:[NSString stringWithFormat:@"%@, %@", group.city, group.country]];
+//    [cell.descriptionLabel setText:group.description];
+//    
+//    return cell;
+//}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,6 +61,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [super viewDidLoad];
+    
+    _manager = [[MeetupManager alloc] init];
+    _manager.communicator = [[MeetupCommunicator alloc] init];
+    _manager.communicator.delegate = _manager;
+    _manager.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(startFetchingGroups:)
+                                                 name:@"kCLAuthorizationStatusAuthorized"
+                                               object:nil];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
